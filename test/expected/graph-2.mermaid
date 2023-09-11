@@ -1,0 +1,11 @@
+stateDiagram-v2
+classDef common fill: white, stroke: black, text-align: center
+classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
+classDef thrown fill: none, line-height: 1, stroke: none
+s1_1::: common: Program#58;enter\nThrowStatement#58;enter\nIdentifier (foo)\nThrowStatement#58;exit
+s1_2:::common: #60;#60;unreachable#62;#62;\nProgram#58;exit
+s1_2:::unreachable
+thrown:::thrown: ✘
+[*] --> s1_1
+s1_1 --> s1_2
+s1_1 --> thrown

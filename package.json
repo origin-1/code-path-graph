@@ -1,0 +1,42 @@
+{
+  "name": "code-path-graph",
+  "version": "0.0.0",
+  "license": "ISC",
+  "author": "Francesco Trotta <ft@fasttime.org> (https://github.com/fasttime)",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "bin": "lib/cli.js",
+  "scripts": {
+    "build": "npm install && npm run build-no-install",
+    "build-no-install": "npm run clean && npm run lint && npm run coverage",
+    "clean": "node dev/clean.mjs",
+    "coverage": "node dev/coverage.mjs",
+    "lint": "eslint . --format compact",
+    "release": "npm version -m \"Version %s\"",
+    "test": "mocha --check-leaks"
+  },
+  "dependencies": {
+    "eslint": "^8.4",
+    "postrequire": "2"
+  },
+  "devDependencies": {
+    "@origin-1/eslint-config": "latest",
+    "c8js": "latest",
+    "globals": "latest",
+    "mocha": "9"
+  },
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "imports": {
+    "#create-graph-map": "./lib/create-graph-map.js",
+    "#format-code-path": "./lib/format-code-path.js",
+    "#linter-error": "./lib/linter-error.js"
+  }
+}

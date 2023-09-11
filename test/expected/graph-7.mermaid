@@ -1,0 +1,9 @@
+stateDiagram-v2
+classDef common fill: white, stroke: black, text-align: center
+classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
+s1_1::: common: Program#58;enter\nReturnStatement#58;enter\nIdentifier (foo)\nReturnStatement#58;exit
+s1_2:::common: #60;#60;unreachable#62;#62;\nProgram#58;exit
+s1_2:::unreachable
+[*] --> s1_1
+s1_1 --> s1_2
+s1_1 --> [*]

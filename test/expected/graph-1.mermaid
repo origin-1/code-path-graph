@@ -1,0 +1,13 @@
+stateDiagram-v2
+classDef common fill: white, stroke: black, text-align: center
+s1_1::: common: Program#58;enter\nIfStatement#58;enter\nLogicalExpression#58;enter\nIdentifier (a)
+s1_2::: common: Identifier (b)\nLogicalExpression#58;exit
+s1_4::: common: IfStatement#58;exit\nExpressionStatement#58;enter\nCallExpression#58;enter\nIdentifier (bar)\nCallExpression#58;exit\nExpressionStatement#58;exit\nProgram#58;exit
+s1_3::: common: BlockStatement#58;enter\nExpressionStatement#58;enter\nCallExpression#58;enter\nIdentifier (foo)\nCallExpression#58;exit\nExpressionStatement#58;exit\nBlockStatement#58;exit
+[*] --> s1_1
+s1_1 --> s1_2
+s1_1 --> s1_4
+s1_2 --> s1_3
+s1_2 --> s1_4
+s1_3 --> s1_4
+s1_4 --> [*]
