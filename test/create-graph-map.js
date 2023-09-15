@@ -107,7 +107,19 @@ describe
             () =>
             assert.throws
             (
-                () => createGraphMap('?'),
+                () =>
+                {
+                    try
+                    {
+                        createGraphMap('?');
+                    }
+                    catch (error)
+                    {
+                        // ESLint 8.4 does not set `nodeType`.
+                        delete error.lintMessages[0].nodeType;
+                        throw error;
+                    }
+                },
                 {
                     constructor: LinterError,
                     lintMessages:
@@ -117,7 +129,6 @@ describe
                             fatal:      true,
                             line:       1,
                             message:    'Parsing error: Unexpected token ?',
-                            nodeType:   null,
                             ruleId:     null,
                             severity:   2,
                         },

@@ -37,3 +37,18 @@ jobs:
     - run: |
         npm install
         npm test
+
+  test-eslint-8_4:
+
+    name: Test (ESLint 8.4)
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    - run: |
+        npm install --force eslint@8.4
+        npm test
