@@ -8,6 +8,7 @@
   ],
   "main": "lib/index.js",
   "bin": "lib/cli.js",
+  "repository": "github:origin-1/code-path-graph",
   "scripts": {
     "build": "npm install && npm run build-no-install",
     "build-no-install": "npm run clean && npm run lint && npm run coverage",
