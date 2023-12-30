@@ -1,5 +1,4 @@
 .*
-!.eslintrc*
 !.git*
 !/.npmrc
 /coverage

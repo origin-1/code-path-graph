@@ -26,6 +26,7 @@
   "devDependencies": {
     "@origin-1/eslint-config": "latest",
     "c8js": "latest",
+    "eslint-formatter-compact": "latest",
     "globals": "latest",
     "mocha": "9"
   },

@@ -8,7 +8,7 @@ async function makeConfig()
     await createFlatConfig
     (
         {
-            ignores: ['coverage', 'test/fixtures'],
+            ignores: ['**/.*', 'coverage', 'test/fixtures'],
         },
         {
             files:              ['**/*.js'],
