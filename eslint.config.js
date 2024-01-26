@@ -2,10 +2,10 @@
 
 async function makeConfig()
 {
-    const [{ createFlatConfig }, { default: globals }] =
+    const [{ createConfig }, { default: globals }] =
     await Promise.all([import('@origin-1/eslint-config'), import('globals')]);
     const config =
-    await createFlatConfig
+    await createConfig
     (
         {
             ignores: ['**/.*', 'coverage', 'test/fixtures'],

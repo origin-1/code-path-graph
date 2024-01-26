@@ -2,7 +2,7 @@
 
 A Node.js library and command-line tool to create [Mermaid state diagrams](https://mermaid.js.org/syntax/stateDiagram.html) of code paths in JavaScript files.
 
-The diagrams are generated using the [code path analysis](https://eslint.org/docs/latest/extend/code-path-analysis) functionality of ESLint can be embedded in GitHub markdown using fenced code blocks (i.e. ```` ```mermaid ```` … ```` ``` ````).
+The diagrams are generated using the [code path analysis](https://eslint.org/docs/latest/extend/code-path-analysis) functionality of ESLint and can be embedded in GitHub markdown using fenced code blocks (i.e. ```` ```mermaid ```` … ```` ``` ````).
 
 ## Installation
 
