@@ -38,7 +38,7 @@ Print both segment names and node traversal info
 **`ecmaVersion`** specifies the JavaScript language version.
 Valid values are numbers or the string `latest` (default).
 
-**`sourceType`** specifies the type of JavaScript code. Valid valus are:
+**`sourceType`** specifies the type of JavaScript code. Valid values are:
 
 * `script`\
 Script (default for `ecmaVersion` 3 or 5)
