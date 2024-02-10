@@ -1,10 +1,11 @@
 stateDiagram-v2
-classDef common fill: white, stroke: black, text-align: center
+classDef common fill: white, stroke: black
+class s1_1, s1_2 common
 classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
-classDef thrown fill: none, line-height: 1, stroke: none
-s1_1::: common: Program#58;enter\nThrowStatement#58;enter\nIdentifier (foo)\nThrowStatement#58;exit
-s1_2:::common: #60;#60;unreachable#62;#62;\nProgram#58;exit
-s1_2:::unreachable
+class s1_2 unreachable
+classDef thrown fill: none, stroke: none
+state "Program:enter\nThrowStatement:enter\nIdentifier (foo)\nThrowStatement:exit" as s1_1
+state "Program:exit" as s1_2
 thrown:::thrown: ✘
 [*] --> s1_1
 s1_1 --> s1_2

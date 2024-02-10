@@ -1,5 +1,6 @@
 stateDiagram-v2
-classDef common fill: white, stroke: black, text-align: center
-s2_1::: common: FunctionDeclaration#58;enter\nIdentifier (foo)\nBlockStatement\nFunctionDeclaration#58;exit
+classDef common fill: white, stroke: black
+class s2_1 common
+state "FunctionDeclaration:enter\nIdentifier (foo)\nBlockStatement\nFunctionDeclaration:exit" as s2_1
 [*] --> s2_1
 s2_1 --> [*]

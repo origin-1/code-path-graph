@@ -1,9 +1,10 @@
 stateDiagram-v2
-classDef common fill: white, stroke: black, text-align: center
+classDef common fill: white, stroke: black
+class s1_1, s1_2 common
 classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
-s1_1::: common: Program#58;enter\nReturnStatement#58;enter\nIdentifier (foo)\nReturnStatement#58;exit
-s1_2:::common: #60;#60;unreachable#62;#62;\nProgram#58;exit
-s1_2:::unreachable
+class s1_2 unreachable
+state "Program:enter\nReturnStatement:enter\nIdentifier (foo)\nReturnStatement:exit" as s1_1
+state "Program:exit" as s1_2
 [*] --> s1_1
 s1_1 --> s1_2
 s1_1 --> [*]

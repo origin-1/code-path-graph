@@ -67,14 +67,15 @@ produces the following output:
 title: s1
 ---
 stateDiagram-v2
-classDef common fill: white, stroke: black, text-align: center
+classDef common fill: white, stroke: black
+class s1_1, s1_2, s1_4, s1_3 common
 classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
-classDef thrown fill: none, line-height: 1, stroke: none
-s1_1::: common: Program#58;enter\nIfStatement#58;enter\nIdentifier (foo)
-s1_2::: common: BlockStatement#58;enter\nThrowStatement#58;enter\nCallExpression#58;enter\nIdentifier (bar)\nCallExpression#58;exit\nThrowStatement#58;exit
-s1_4::: common: IfStatement#58;exit\nProgram#58;exit
-s1_3:::common: #60;#60;unreachable#62;#62;\nBlockStatement#58;exit
-s1_3:::unreachable
+class s1_3 unreachable
+classDef thrown fill: none, stroke: none
+state "Program:enter\nIfStatement:enter\nIdentifier (foo)" as s1_1
+state "BlockStatement:enter\nThrowStatement:enter\nCallExpression:enter\nIdentifier (bar)\nCallExpression:exit\nThrowStatement:exit" as s1_2
+state "IfStatement:exit\nProgram:exit" as s1_4
+state "BlockStatement:exit" as s1_3
 thrown:::thrown: ✘
 [*] --> s1_1
 s1_1 --> s1_2
@@ -92,14 +93,15 @@ In a GitHub markdown file, this text can be inserted in a fenced code block (see
 title: s1
 ---
 stateDiagram-v2
-classDef common fill: white, stroke: black, text-align: center
+classDef common fill: white, stroke: black
+class s1_1, s1_2, s1_4, s1_3 common
 classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
-classDef thrown fill: none, line-height: 1, stroke: none
-s1_1::: common: Program#58;enter\nIfStatement#58;enter\nIdentifier (foo)
-s1_2::: common: BlockStatement#58;enter\nThrowStatement#58;enter\nCallExpression#58;enter\nIdentifier (bar)\nCallExpression#58;exit\nThrowStatement#58;exit
-s1_4::: common: IfStatement#58;exit\nProgram#58;exit
-s1_3:::common: #60;#60;unreachable#62;#62;\nBlockStatement#58;exit
-s1_3:::unreachable
+class s1_3 unreachable
+classDef thrown fill: none, stroke: none
+state "Program:enter\nIfStatement:enter\nIdentifier (foo)" as s1_1
+state "BlockStatement:enter\nThrowStatement:enter\nCallExpression:enter\nIdentifier (bar)\nCallExpression:exit\nThrowStatement:exit" as s1_2
+state "IfStatement:exit\nProgram:exit" as s1_4
+state "BlockStatement:exit" as s1_3
 thrown:::thrown: ✘
 [*] --> s1_1
 s1_1 --> s1_2
@@ -116,14 +118,15 @@ to produce a visible diagram like the following.
 title: s1
 ---
 stateDiagram-v2
-classDef common fill: white, stroke: black, text-align: center
+classDef common fill: white, stroke: black
+class s1_1, s1_2, s1_4, s1_3 common
 classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
-classDef thrown fill: none, line-height: 1, stroke: none
-s1_1::: common: Program#58;enter\nIfStatement#58;enter\nIdentifier (foo)
-s1_2::: common: BlockStatement#58;enter\nThrowStatement#58;enter\nCallExpression#58;enter\nIdentifier (bar)\nCallExpression#58;exit\nThrowStatement#58;exit
-s1_4::: common: IfStatement#58;exit\nProgram#58;exit
-s1_3:::common: #60;#60;unreachable#62;#62;\nBlockStatement#58;exit
-s1_3:::unreachable
+class s1_3 unreachable
+classDef thrown fill: none, stroke: none
+state "Program:enter\nIfStatement:enter\nIdentifier (foo)" as s1_1
+state "BlockStatement:enter\nThrowStatement:enter\nCallExpression:enter\nIdentifier (bar)\nCallExpression:exit\nThrowStatement:exit" as s1_2
+state "IfStatement:exit\nProgram:exit" as s1_4
+state "BlockStatement:exit" as s1_3
 thrown:::thrown: ✘
 [*] --> s1_1
 s1_1 --> s1_2

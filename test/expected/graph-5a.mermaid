@@ -1,5 +1,6 @@
 stateDiagram-v2
-classDef common fill: white, stroke: black, text-align: center
-s1_1::: common: Program#58;enter\nFunctionDeclaration\nProgram#58;exit
+classDef common fill: white, stroke: black
+class s1_1 common
+state "Program:enter\nFunctionDeclaration\nProgram:exit" as s1_1
 [*] --> s1_1
 s1_1 --> [*]
