@@ -1,0 +1,16 @@
+stateDiagram-v2
+classDef common fill: white, stroke: black
+class s1_1, s1_2, s1_4, s1_3 common
+classDef unreachable fill: #FF9800, stroke-dasharray: 5 5
+class s1_3 unreachable
+state "Program:enter\nIfStatement:enter\nIdentifier (foo)" as s1_1
+state "ReturnStatement" as s1_2
+state "IfStatement:exit\nProgram:exit" as s1_4
+state "s1_3" as s1_3
+[*] --> s1_1
+s1_1 --> s1_2
+s1_1 --> s1_4
+s1_2 --> s1_3
+s1_3 --> s1_4
+s1_2 --> [*]
+s1_4 --> [*]

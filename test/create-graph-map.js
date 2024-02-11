@@ -6,9 +6,9 @@ const { strict: assert }            = require('assert');
 const { promises: { readFile } }    = require('fs');
 const { join }                      = require('path');
 
-async function test({ code, detail, expectedMappings })
+async function test({ code, detail, expectedMappings, sourceType })
 {
-    const graphMap = createGraphMap(code, { detail });
+    const graphMap = createGraphMap(code, { detail, sourceType });
     const actualKeys = [...graphMap.keys()];
     const expectedKeys = Object.keys(expectedMappings);
     assert.deepEqual(actualKeys, expectedKeys);
@@ -39,7 +39,7 @@ describe
                     {
                         foo();
                     }
-                    bar();                
+                    bar();
                     `,
                     expectedMappings: { 's1': 'graph-1' },
                 },
@@ -83,6 +83,20 @@ describe
                     code:               'if (foo) throw bar;',
                     detail:             'full',
                     expectedMappings:   { 's1': 'graph-4' },
+                },
+            ),
+        );
+
+        it
+        (
+            'conditional return statement with segments detail',
+            async () =>
+            await test
+            (
+                {
+                    code:               'if (foo) return;',
+                    sourceType:         'commonjs',
+                    expectedMappings:   { 's1': 'graph-8' },
                 },
             ),
         );
