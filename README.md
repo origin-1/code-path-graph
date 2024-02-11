@@ -26,7 +26,7 @@ npm i -g code-path-graph
 code-path-graph [--detail=<...>] [--ecma-version=<...>] [--source-type=<...>] <file>
 ```
 
-**`detail`** controls the information printed in nodes of the graph. Valid values are:
+**`--detail`** controls the information printed in nodes of the graph. Valid values are:
 
 * `nodes`\
 Print node traversal info only (default)
@@ -35,15 +35,15 @@ Print segment names only
 * `full`\
 Print both segment names and node traversal info
 
-**`ecmaVersion`** specifies the JavaScript language version.
+**`--ecma-version`** specifies the JavaScript language version.
 Valid values are numbers or the string `latest` (default).
 
-**`sourceType`** specifies the type of JavaScript code. Valid values are:
+**`--source-type`** specifies the type of JavaScript code. Valid values are:
 
 * `script`\
-Script (default for `ecmaVersion` 3 or 5)
+Script (default when `--ecma-version` is `3` or `5`)
 * `module`\
-ECMAScript module (default for other values of `ecmaVersion`)
+ECMAScript module (default for other values of `--ecma-version`)
 * `commonjs`\
 CommonJS module
 
