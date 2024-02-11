@@ -1,6 +1,6 @@
 {
   "name": "code-path-graph",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node.js library and command-line tool to create Mermaid state diagrams of code paths in JavaScript files.",
   "license": "ISC",
   "author": "Francesco Trotta <ft@fasttime.org> (https://github.com/fasttime)",

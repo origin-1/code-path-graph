@@ -1,3 +1,9 @@
+<a name="v0.1.1"></a>
+## [v0.1.1](https://github.com/origin-1/code-path-graph/releases/tag/v0.1.1) (2024-02-11)
+
+* Fixed a bug with the formatting of empty segments.
+* Replaced option names with CLI flags in the readme file and inline help.
+
 <a name="v0.1.0"></a>
 ## [v0.1.0](https://github.com/origin-1/code-path-graph/releases/tag/v0.1.0) (2024-02-10)
 
